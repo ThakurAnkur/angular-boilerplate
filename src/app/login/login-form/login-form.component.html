@@ -1,1 +1,14 @@
-<p>login-form works!</p>
+<form action="/api/login" (ngSubmit)="onSubmit($event)" [formGroup]="registerForm" novalidate>
+  <fieldset name="login">
+    <div class="form-field">
+      <label for="email">Email Address: </label>
+      <input required type="email" name="email" id="email" formControlName="email">
+    </div>
+    <div class="form-field">
+      <label for="password">Password: </label>
+      <input required type="text" name="password" id="password" formControlName="password">
+    </div>
+  </fieldset>
+  {{registerForm.value | json}}
+  <button [disabled]="!registerForm.valid">Submit</button>
+</form>
