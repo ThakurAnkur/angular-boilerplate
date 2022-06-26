@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { RegisterService } from '../register.service';
-import { User } from './User.entity';
+import { User } from '../../../entity/User.entity';
 
 @Component({
-  selector: 'app-login-form',
-  templateUrl: './login-form.component.html',
-  styleUrls: ['./login-form.component.scss']
+  selector: 'app-register-form',
+  templateUrl: './register-form.component.html',
+  styleUrls: ['./register-form.component.scss']
 })
-export class LoginFormComponent implements OnInit {
+export class RegisterFormComponent implements OnInit {
   // loginform = new FormGroup({
   //   email: new FormControl(''),
   //   password: new FormControl(''),
