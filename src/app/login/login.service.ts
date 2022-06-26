@@ -15,4 +15,7 @@ export class LoginService {
   doLogin(user: User) {
     return this.httpClient.post(API_URL + 'auth/login', {username: user.email, password: user.password});
   }
+  me() {
+    return this.httpClient.get(API_URL + 'profile');
+  }
 }

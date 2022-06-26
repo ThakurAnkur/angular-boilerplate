@@ -26,4 +26,11 @@ export class LoginFormComponent implements OnInit {
     })
   }
 
+  async currentUser(ev: Event) {
+    const data = await this.loginService.me()
+    data.subscribe((data)=>{
+      console.log(data);
+    })
+  }
+
 }

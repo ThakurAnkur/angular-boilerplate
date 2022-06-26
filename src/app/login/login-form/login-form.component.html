@@ -13,3 +13,6 @@
   {{loginForm.value | json}}
   <button [disabled]="!loginForm.valid">Submit</button>
 </form>
+
+<h2>Current User</h2>
+<button (click)="currentUser($event)">Find Out</button>
