@@ -13,6 +13,6 @@ export class LoginService {
   }
 
   doLogin(user: User) {
-    return this.httpClient.post(API_URL + 'login', user);
+    return this.httpClient.post(API_URL + 'auth/login', {username: user.email, password: user.password});
   }
 }
